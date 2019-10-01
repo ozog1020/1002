@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {background: url(bg_.gif); background-repeat: no-repeat; display: block;  background-size:cover; text-align: center;position: relative;}
+		.clock {width: 1000px; height:150px; display: block; margin: auto; text-align: center;}
+		.thum:hover {opacity: 1;}
+		#a {margin: 0 auto; width: 150px; height: 150px; padding:30px; opacity: 0.7;}
+		#b {margin: 0 auto; width: 150px; height: 150px; padding:30px; opacity: 0.7;}
+		#c {margin: 0 auto; width: 150px; height: 150px; padding:30px; opacity: 0.7;}
+	</style>
+</head>
+<body id="mybody">
+	
+
+	<div class="clock">
+		<img src="1.png" class="thum" id="a">
+		<img src="3.png" class="thum" id="b">
+		<img src="4.png" class="thum" id="c">
+	</div>
+	<audio src="aa.mp3" id="aa"></audio>
+	<audio src="bb.mp3" id="bb"></audio>
+	<audio src="cc.mp3" id="cc"></audio>
+
+	<script type="text/javascript">
+	var astate = "off";
+	a.onclick = function () {
+		if(astate == "off"){ 
+			aa.play(); astate = "on";
+			a.style.opacity = "1";
+			mybody.style.background = "url('bg.gif')";
+			mybody.style.backgroundSize = "cover";
+		}
+		else {
+			aa.pause(); astate="off";
+			a.style.opacity = "0.3";
+		}
+	}
+
+	var bstate = "off";
+	b.onclick = function () {
+		if(bstate == "off"){ 
+			bb.play(); bstate = "on";
+			b.style.opacity = "1";
+			mybody.style.background = "url('bg2_.gif')";
+			mybody.style.backgroundSize = "cover";
+		}
+		else {
+			bb.pause(); bstate="off";
+			b.style.opacity = "0.3";
+		}
+	}
+	var cstate = "off";
+	c.onclick = function () {
+		if(cstate == "off"){ 
+			cc.play(); cstate = "on";
+			c.style.opacity = "1";
+			mybody.style.background = "url('bg3_.gif')";
+			mybody.style.backgroundSize = "cover";
+		}
+		else {
+			cc.pause(); cstate="off";
+			c.style.opacity = "0.3";
+		}
+	}
+
+	</script>
+
+</body>
+</html>
